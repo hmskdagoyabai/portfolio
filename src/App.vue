@@ -57,7 +57,6 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Recursive&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Recursive&display=swap");
 
-
 #app {
   font-family: "Kosugi Maru", sans-serif;
   /* font-family: 'Recursive', sans-serif; */
@@ -87,7 +86,7 @@ body:before {
   background-size: contain;
 }
 
-#nav {
+/* #nav {
   padding: 30px;
 }
 
@@ -98,5 +97,54 @@ body:before {
 
 #nav a.router-link-exact-active {
   color: #42b983;
+} */
+
+/* .container{
+  margin: 0 10% 0 10%;
+  text-align: center;
+} */
+
+.box-wrapper {
+  display: flex;
+  /* margin: 0; */
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
 }
+
+@media screen and (min-width: 700px) {
+  .box-wrapper {
+    padding: 0px 5% 0px 5%;
+  }
+}
+
+
+
+.tweet {
+  display: inline-block;
+  margin: 30px 30px;
+  width: 320px;
+  height: auto;
+
+  /* background: #fff; */
+  /* border-radius: 5px; */
+  /* box-shadow: 0 2px 5px #ccc; */
+}
+
+
+/* 浮かせたいもの */
+.tweet, .workcard, #outputs-sub {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.tweet:hover, .workcard:hover, #outputs-sub:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
 </style>

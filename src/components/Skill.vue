@@ -3,16 +3,19 @@
     <pageTitle title="Skill" fa_icon="brain" caption="できること" />
 
     <NomalContent v-for="item in items" :key="item.msg" :item="item" />
+
   </div>
 </template>
 
 <script>
 import PageTitle from "./PageTitle.vue";
+
 import NomalContent from "./NomalContents.vue";
 export default {
   components: {
     PageTitle,
     NomalContent,
+
   },
   data() {
     return {

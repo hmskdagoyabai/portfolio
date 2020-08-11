@@ -51,7 +51,7 @@ export default {
 .youtubecard {
   display: inline-block;
   margin: 30px 30px;
-  width: 350px;
+  width: 320px;
   /* height: 400px; */
   background: #fff;
   border-radius: 5px;

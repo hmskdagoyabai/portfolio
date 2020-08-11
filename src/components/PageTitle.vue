@@ -2,8 +2,12 @@
   <div class="title">
     <h3 id="title_str">
       <font-awesome-icon id="fa-icon" v-bind:icon="fa_icon" /> {{ title }}
+
+
     </h3>
     <div id="caption">{{caption}}</div>
+
+
   </div>
 </template>
 
@@ -31,11 +35,12 @@ export default {
 .title {
   font-family: 'Recursive', sans-serif;
   padding: 70px 0 20px 0;
-  margin: 50px 30% 50px 30%;
+  margin: 50px 15% 50px 15%;
   position: relative;
   /* font-size: 2em; */
   color: #333;
   border-bottom: #eb9898 4px double;
+  text-align: center;
   
 }
 
@@ -46,11 +51,13 @@ export default {
 }
 } */
 
+
+
 #title_str {
   /* font-family: 'Recursive', sans-serif; */
   /* min-width: 150px; */
-  text-align: center;
   white-space: nowrap;
+  text-align: center;
 }
 
 #caption{

@@ -25,7 +25,7 @@ export default {
 .subtitle {
   font-family: "Recursive", sans-serif;
   padding: 60px 0 20px 0;
-  margin: 40px 40% 40px 40%;
+  margin: 40px 25% 40px 25%;
   position: relative;
   /* font-size: 2em; */
   color: #333;
@@ -44,5 +44,6 @@ export default {
 #caption {
   font-family: "Kosugi Maru", sans-serif;
   white-space: nowrap;
+    text-align: center;
 }
 </style>

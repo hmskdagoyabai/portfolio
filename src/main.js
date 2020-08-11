@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+// import Router from "vue-router";
+
+// Vue.use(Router);
+
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css' 
@@ -26,6 +30,26 @@ library.add(fas, far, fab)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 /* ここまで */
+
+
+import VueTyperPlugin from 'vue-typer'
+Vue.use(VueTyperPlugin)
+
+
+// import VueAnalytics from 'vue-analytics';
+
+// // Configuration VueAnalytics
+// Vue.use(VueAnalytics, {
+//   id: 'UA-134062345-5',
+//   Router
+// });
+
+
+
+// axios
+import axios from 'axios'
+import VueAxios from 'vue-axios' 
+Vue.use(VueAxios, axios) 
 
 
 

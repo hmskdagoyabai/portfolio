@@ -1,6 +1,6 @@
 <template>
   <div class="footer" >
-    Copyright© Seaside Works. 2020
+    Copyright © 2020 Seaside Works. All Rights Reserved.
   </div>
 </template>
 

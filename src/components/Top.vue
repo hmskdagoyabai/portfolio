@@ -1,40 +1,55 @@
 <template>
   <div class="top">
-    <!-- <h1 class="content-title">Top</h1> -->
-    <img id="hamabe_img" src="../static/hamabe.png">
+    <div class="banner">
+      <img id="hamabe_img" src="../static/hamabe.png" />
+    </div>
+    <p id="intro">
+      Welcome to
+      <span id="underline">Hama's Seaside Works.</span>
+    </p>
 
-    <div><span id="seaside">Hama's Seaside Works. </span> (はま浜辺) とは、私 はま の アンストッパブル で 楽しさ重視 な 活動の記録 です。</div>
+    <!-- <vue-typer
+      :text="['Welcome to Hama\'s Seaside Works.']"
+      class="seaside"
+      :repeat="0"
+    ></vue-typer> -->
   </div>
-
-  
 </template>
 
-<script>
 
+<script>
 </script>
 
 
 <style>
-
-@media screen and (min-width: 479px) { 
-#hamabe_img{
-  margin: 80px 10px 10px 10px ;
-  width: 60%;
-
+@media screen and (min-width: 479px) {
+  #hamabe_img {
+    margin: 80px 10px 10px 10px;
+    width: 60%;
+  }
 }
-}
-@media screen and (max-width: 479px) { 
-#hamabe_img{
-  margin: 80px 10px 10px 10px ;
-  width: 90%;
-
-}
+@media screen and (max-width: 479px) {
+  #hamabe_img {
+    margin: 80px 10px 10px 10px;
+    width: 90%;
+  }
 }
 
-#seaside{
-  font-family: 'Recursive', sans-serif;
-  font-size: 25px;
-   background-image: linear-gradient(transparent 70%, rgba(255, 205, 205, 0.7) 30%);
+#intro {
+  font-family: "Recursive", sans-serif;
+  /* padding: 60px 0 20px 0; */
+  position: relative;
+  /* font-size: 2em; */
+  color: #333;
+  /* border-bottom: #eb9898 2px solid; */
+  /* text-align: center; */
+  /* white-space: nowrap; */
+}
 
+#underline {
+  background-image: linear-gradient(
+    transparent 70%,
+    rgba(255, 205, 205, 0.7) 30%
+  );
 }
 </style>

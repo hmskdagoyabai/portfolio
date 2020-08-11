@@ -18,7 +18,6 @@
             <b-nav-item-dropdown text="Outputs">
               <b-dropdown-item href="#" @click="clickSmoothScroll('#crafts')">Crafts</b-dropdown-item>
               <b-dropdown-item href="#" @click="clickSmoothScroll('#bass')">Bass Plays</b-dropdown-item>
-              <b-dropdown-item href="#" @click="clickSmoothScroll('#apps')">Applications</b-dropdown-item>
               <b-dropdown-item href="#" @click="clickSmoothScroll('#notes')">Diary</b-dropdown-item>
               <b-dropdown-item href="#" @click="clickSmoothScroll('#others')">Others</b-dropdown-item>
             </b-nav-item-dropdown>
