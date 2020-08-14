@@ -1,27 +1,52 @@
 <template>
   <div id="note">
-    noteの最新記事を自動で取得しています。
+    <SubTitle title="Diary" caption="日々の記録" fa_icon="book" />
+    <p>
+      <span id="underline-o">noteの最新記事</span>
+      を{{article_num}}件自動で取得し表示しています。
+    </p>
     <div class="box-wrapper">
       <WorkCard v-for="note in notes" :key="note.title" :item="note" />
+      <!-- <WorkCard :item="andmore" /> -->
     </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
-import WorkCard from "./WorkCard.vue";
+import WorkCard from "../components//WorkCard.vue";
+import SubTitle from "../components//SubTitle.vue";
 
 export default {
   components: {
     WorkCard,
+    SubTitle,
   },
   name: "Note",
   data() {
     return {
       notes: [],
+      article_num: 4,
+
+      andmore: {
+        img: require("@/static/yabaki.png"),
+        caption:
+          "noteのマガジン「やば記」では日記を書いています。はてなブログ「やばグ」は初代のブログで、オタク話をよく書いていました。",
+        title: "and more ...",
+        links: [
+          {
+            type: "やば記",
+            link: "https://note.com/hmskdagoyabai/m/m1bb8fc89e6cb",
+          },
+          {
+            type: "やばグ",
+            link: "http://hmskdagoyabai.hatenablog.com/",
+          },
+        ],
+      },
     };
   },
-
+  methods: {},
   mounted: function () {
     // 参考 https://alliance7.blogspot.com/2019/01/google-formaxioscros.html
     const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
@@ -32,12 +57,9 @@ export default {
       )
       // thenで成功した場合の処理をかける
       .then((response) => {
-        console.log("status:", response.status); // 200
-        console.log("body:", response.data); // response body.
-
         // レスポンスからnotesオブジェクトを整える
-        var article_num = 6;
-        for (let i = 0; i < article_num; i++) {
+
+        for (let i = 0; i < this.article_num; i++) {
           var note = {};
           note.title = response.data.data.contents[i].name;
           note.img = response.data.data.contents[i].eyecatch;
@@ -70,3 +92,6 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+</style>

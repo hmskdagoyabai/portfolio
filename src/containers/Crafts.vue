@@ -1,87 +1,38 @@
 <template>
-  <div class="outputs">
-    <pageTitle title="Outputs" fa_icon="th-list" caption="やったこと" />
-    <div class="container">
-      <div class="row">
-        <div class="col">いろいろあるので以下の4種類に分けています。<span id="underline">興味のあるもの</span>をみてみてね。</div>
-      </div>
-
-      <div class="row">
-        <div class="col-md" id="outputs-sub" href="#" @click="clickSmoothScroll('#crafts')">
-          <span id="outputs-sub-title">Crafts</span>
-          <br />つくったもの
-        </div>
-        <div class="col-md" id="outputs-sub" href="#" @click="clickSmoothScroll('#bass')">
-          <span id="outputs-sub-title">Bass Plays</span>
-          <br />弾いたもの
-        </div>
-        <div class="col-md" id="outputs-sub" href="#" @click="clickSmoothScroll('#notes')">
-          <span id="outputs-sub-title">Diary</span>
-          <br />日々の記録
-        </div>
-        <div class="col-md" id="outputs-sub" href="#" @click="clickSmoothScroll('#others')">
-          <span id="outputs-sub-title">Others</span>
-          <br />その他のいろいろ
-        </div>
-      </div>
-    </div>
-
-    <div class="crafts" id="crafts">
-      <SubTitle title="Crafts" caption="つくったもの" />
-      <div class="box-wrapper">
-        <WorkCard v-for="item in works" :key="item.img" :item="item"></WorkCard>
-        <WorkCard :item="YouTube.rina" />
-        <WorkCard :item="YouTube.tenga" />
-        <Tweet class="tweet" id="1261539238958362624"></Tweet>
-        <WorkCard v-for="item in works" :key="item.img" :item="item"></WorkCard>
-      </div>
-    </div>
-
-    <div class="bass" id="bass">
-      <SubTitle title="Bass Plays" caption="弾いたもの" />
-      <div class="box-wrapper">
-        <WorkCard :item="YouTube.bass1" />
-        <WorkCard :item="YouTube.bass2" />
-        <Tweet class="tweet" id="1288503454613139456"></Tweet>
-        <Tweet class="tweet" id="1061495510320594944"></Tweet>
-        <Tweet class="tweet" id="1116571467649433600"></Tweet>
-      </div>
-    </div>
-
-    <div class="notes" id="notes">
-      <SubTitle title="Diary" caption="日々の記録" />
-      <div class="box-wrapper">
-    <Note ></Note>
-
-      </div>
-    </div>
-
-    <div class="others" id="others">
-      <SubTitle title="Others" caption="その他のあれこれ" />
-      <div class="box-wrapper">
-        <WorkCard v-for="work in works" :key="work.img" :item="work"></WorkCard>
-      </div>
+  <div class="crafts">
+    <SubTitle title="Crafts" caption="つくったもの" fa_icon="ruler-combined" />
+    <!-- 主に
+    <span id="underline-r">プログラミング</span>や
+    <span id="underline-o">電子工作</span>
+    などをやっています。-->
+    <div class="box-wrapper">
+      <WorkCard :item="portfolio" />
+      <WorkCard :item="YouTube.rina" />
+      <WorkCard :item="YouTube.tenga" />
+      <Tweet class="tweet" v-for="tweet in tweets" :key="tweet" :id="tweet"></Tweet>
     </div>
   </div>
 </template>
 
 <script>
-import PageTitle from "./PageTitle.vue";
-import SubTitle from "./SubTitle.vue";
-import WorkCard from "./WorkCard.vue";
-import Note from "./Note.vue";
+import SubTitle from "../components//SubTitle.vue";
+import WorkCard from "../components//WorkCard.vue";
 import { Tweet } from "vue-tweet-embed";
 
 export default {
   components: {
-    PageTitle,
     WorkCard,
     SubTitle,
     Tweet,
-    Note
   },
   data() {
     return {
+      tweets: [
+        "1259419595019976704",
+        "1013414593773748224",
+        "1261539238958362624",
+        "1068140620084994050",
+      ],
       YouTube: {
         rina: {
           videoID: "0yT_qYHqlOU",
@@ -97,26 +48,30 @@ export default {
               type: "Qiita",
               link: "https://qiita.com/hamahamabe/items/9216df345bb908eb5199",
             },
+            {
+              type: "Twitter",
+              link: "https://twitter.com/ybybybmh/status/1225060324400746496",
+            },
           ],
-          keywords: [
-            "Arduino",
-            "3Dプリンタ",
-            "ラブライブ！",
-            "虹ヶ咲学園スクールアイドル同好会",
-          ],
+          keywords: ["Arduino", "3Dプリンタ", "ラブライブ！", "虹ヶ咲"],
         },
         tenga: {
           videoID: "FXsCt0xqqbk",
           caption:
-            "7色に光る「ゲーミングTENGA」を作りました。TENGAも7色に光ったほうが良いので…。",
+            "7色に光る「ゲーミングTENGA」を作りました。TENGAが7色に光ったほうが楽しいと思ったので…。",
           title: "ゲーミングTENGAの作り方",
           links: [
             {
               type: "YouTube",
               link: "https://youtu.be/FXsCt0xqqbk",
             },
+
+            {
+              type: "Twitter",
+              link: "https://twitter.com/ybybybmh/status/1254358289015398400",
+            },
           ],
-          keywords: ["TENGA", "Arduino", "NeoPixcel"],
+          keywords: ["Arduino", "NeoPixcel", "TENGA"],
         },
         bass1: {
           videoID: "ma5EGlU37A4",
@@ -144,13 +99,30 @@ export default {
           ],
         },
       },
+      portfolio: {
+        img: require("@/static/hamabe.png"),
+        caption:
+          "このページです。フロントエンドは完全未経験だったので、Vue.jsの勉強を兼ねて1週間ほどで作成しました。AWS S3にデプロイし、Route53で独自ドメイン割当て、およびACM・CloudFrontによるSSL対応も行っています。",
+        title: "ポートフォリオ はま浜辺",
+        links: [
+          {
+            type: "",
+            link: "https://hmsk.work/",
+          },
+          {
+            type: "Qiita",
+            link: "https://qiita.com/hamahamabe/items/9216df345bb908eb5199",
+          },
+        ],
+        keywords: ["Vue.js", "ポートフォリオ", "フロントエンド", "AWS"],
+      },
 
       works: {
         work1: {
           img: require("@/static/bg_awashima.jpg"),
           caption:
             "Arduinoを使ってラブライブ！虹ヶ咲学園スクールアイドル同好会に登場する璃奈ちゃんボードを作成しました。",
-          title: "璃奈ちゃんボードの作り方",
+          title: "test",
           links: [
             {
               type: "YouTube",
@@ -194,7 +166,7 @@ export default {
           img: require("@/static/board.jpg"),
           caption:
             "ラブライブ！虹ヶ咲学園スクールアイドル同好会に登場する天王寺璃奈ちゃんが愛用している「オートエモーションコンバート璃奈ちゃんボード」を作成しました。Arduino,3Dプリンタなど",
-          title: "璃奈ちゃんボードを作ろう",
+          title: "test",
           links: [
             {
               type: "YouTube",
@@ -221,14 +193,4 @@ export default {
 
 
 <style scoped>
-#outputs-sub {
-  margin-top: 20px;
-}
-
-#outputs-sub-title {
-  font-family: "Recursive", sans-serif;
-  font-size: 1.5em;
-}
-
-
 </style>

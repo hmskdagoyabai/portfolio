@@ -1,6 +1,9 @@
 <template>
   <div class="subtitle">
-    <h4 id="subtitle_str">{{ title }}</h4>
+    <h4 id="subtitle_str">
+      <font-awesome-icon id="fa-icon" v-bind:icon="fa_icon" />
+      {{ title }}
+    </h4>
     <div id="caption">{{caption}}</div>
   </div>
 </template>
@@ -17,21 +20,30 @@ export default {
       type: String,
       default: "",
     },
+    fa_icon: {
+      type: String,
+      default: "",
+    },
   },
 };
 </script>
 
-<style  scoped>
+<style >
 .subtitle {
-  font-family: "Recursive", sans-serif;
-  padding: 60px 0 20px 0;
-  margin: 40px 25% 40px 25%;
+  padding: 65px 0 10px 0;
+  margin: 40px 25% 20px 25%;
   position: relative;
   /* font-size: 2em; */
   color: #333;
-  border-bottom: #eb9898 2px solid;
+  border-bottom: #68b6c8 3px double;
   /* text-align: center; */
   /* white-space: nowrap; */
+}
+
+@media screen and (max-width: 500px) {
+  .subtitle {
+    margin: 50px 10% 30px 10%;
+  }
 }
 
 #subtitle_str {
@@ -42,8 +54,7 @@ export default {
 }
 
 #caption {
-  font-family: "Kosugi Maru", sans-serif;
   white-space: nowrap;
-    text-align: center;
+  text-align: center;
 }
 </style>

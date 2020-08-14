@@ -1,58 +1,50 @@
 <template>
   <div class="workcard">
-    <!-- videoIDがあるならYouTube埋め込み -->
-    <div class="youtube" v-if="item.videoID">
-      <iframe
-        frameborder="0"
-        allowfullscreen="1"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        title="YouTube video player"
-        v-bind:src="'https://www.youtube.com/embed/' + item.videoID"
-      ></iframe>
-    </div>
-
-    <!-- 画像がある場合画像埋め込み -->
-    <div v-else-if="item.img">
-      <a v-bind:href="item.links[0].link"  target="”_blank”">
-        <img class="card-img" v-bind:src="item.img" />
-      </a>
-    </div>
-
-
     <div class="card-content">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h1 class="card-title jp">{{item.title}}</h1>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <p class="card-text">{{item.caption}}</p>
-          </div>
-        </div>
+      <!-- videoIDがあるならYouTube埋め込み -->
+      <div class="youtube" v-if="item.videoID">
+        <iframe
+          frameborder="0"
+          allowfullscreen="1"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          title="YouTube video player"
+          v-bind:src="'https://www.youtube.com/embed/' + item.videoID"
+        ></iframe>
+      </div>
 
-        <div class="row">
-          <div class="col" v-for="link in item.links" :key="link" :link="link">
-            <div class="card-link">
-              <a v-bind:href="link.link" target="”_blank”">{{link.type}}</a>
-            </div>
+      <!-- 画像がある場合画像埋め込み -->
+      <div v-else-if="item.img">
+        <a v-bind:href="item.links[0].link" target="”_blank”">
+          <div class="imgWrap">
+            <img class="card-img" v-bind:src="item.img" />
+          </div>
+        </a>
+      </div>
+
+      <h1 class="card-title jp">{{item.title}}</h1>
+      <p class="card-text">{{item.caption}}</p>
+    </div>
+
+    <div class="container" id="card-footer">
+      <div class="row">
+        <div class="col">
+          <div class="card-link">
+            <a v-for="link in item.links" :key="link" v-bind:href="link.link" target="”_blank”">
+              {{link.type}}
+              <a v-if="index!=0">&nbsp;&nbsp;</a>
+            </a>
           </div>
         </div>
+      </div>
 
-        <div class="row">
-          <div class="col">
-            <span class="card-keywords">
-              <span
-                v-for="(keyword, index) in item.keywords"
-                :key="keyword"
-                :keyword="keyword"
-              >
-                <a v-if="index!=0">,</a>
-                <a>{{keyword}}</a>
-              </span>
+      <div class="row">
+        <div class="col">
+          <span class="card-keywords">
+            <span v-for="(keyword, index) in item.keywords" :key="keyword" :keyword="keyword">
+              <a v-if="index!=0">&nbsp;,&nbsp;</a>
+              <a>{{keyword}}</a>
             </span>
-          </div>
+          </span>
         </div>
       </div>
     </div>
@@ -74,17 +66,28 @@ export default {
 <style  scoped>
 .workcard {
   display: inline-block;
-  margin: 30px 30px;
-  width: 320px;
   /* height: auto; */
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 5px #ccc;
+
+  display: flex;
+  flex-direction: column;
 }
-.card-img {
-  margin: 2.5%;
-  border-radius: 5px 5px 0 0;
-  width: 95%;
+
+.workcard #card-footer {
+  /* position: absolute;
+  bottom: 0; */
+
+  padding-bottom: 15px;
+  /* text-align: center; */
+  /* margin-top: auto; */
+}
+
+.workcard .card-img,
+.workcard .youtube {
+  /* margin: 2.5%; */
+  border-radius: 3px;
+  width: 100%;
   height: 200px;
   object-fit: cover;
 
@@ -94,23 +97,26 @@ export default {
   overflow: hidden;
 }
 
-.youtube {
+/* .workcard .youtube {
   margin: 2.5%;
-  border-radius: 5px 5px 0 0;
-  width: 95%;
+  border-radius: 5px 5px 5px 5px;
+  width: 100%;
   height: 200px;
   object-fit: cover;
   display: block;
   max-width: 100%;
   overflow: hidden;
-}
+} */
 
-.card-content {
+.workcard .card-content {
   padding: 15px 15px 8px 15px;
-
+  /* display: flex; */
+  height: 100%;
+  position: relative;
 }
 .card-title {
   font-size: 20px;
+  margin-top: 25px;
   color: #333;
 }
 
@@ -132,7 +138,7 @@ export default {
   /* border-radius: 5px; */
 }
 
-.card__header {
+/* .card__header {
   position: relative;
 }
 
@@ -173,13 +179,12 @@ export default {
 .card__footer {
   padding: 1rem;
   border-top: 1px solid #ddd;
-}
+} */
 
 iframe {
   width: 100%;
   height: 200px;
 }
-
 
 /* .workcard {
     -webkit-box-sizing: border-box;
@@ -194,4 +199,22 @@ iframe {
     -ms-transform: translateY(-5px);
     transform: translateY(-5px);
 } */
+
+.imgWrap {
+  overflow: hidden;
+
+  /* width: 100%;
+  height: 200px; */
+}
+.imgWrap img {
+  display: block;
+  transition-duration: 0.3s; /*変化に掛かる時間*/
+  filter: contrast(100%) grayscale(70%);
+}
+.imgWrap img:hover {
+  transition-duration: 0.3s; /*変化に掛かる時間*/
+  /* transform: scale(1.025); */
+  /* opacity: 0.8; */
+  filter: contrast(110%) grayscale(0);
+}
 </style>

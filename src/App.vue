@@ -1,12 +1,14 @@
 <template>
   <div id="app">
     <Header></Header>
-    <Top id="top"></Top>
-    <About id="about"></About>
-    <Skill id="skill"></Skill>
-    <Outputs id="outputs"></Outputs>
-    <Links id="links"></Links>
-    <Contact id="contact"></Contact>
+    <div id="main-contents">
+      <Top id="top"></Top>
+      <About id="about"></About>
+      <Skill id="skill"></Skill>
+      <Outputs id="outputs"></Outputs>
+      <Links id="links"></Links>
+      <Contact id="contact"></Contact>
+    </div>
     <Footer id="footer"></Footer>
   </div>
 </template>
@@ -14,14 +16,14 @@
 
 
 <script>
-import Header from "./components/Header.vue";
-import Top from "./components/Top.vue";
-import Footer from "./components/Footer.vue";
-import About from "./components/About.vue";
-import Skill from "./components/Skill.vue";
-import Outputs from "./components/Outputs.vue";
-import Contact from "./components/Contact.vue";
-import Links from "./components/Links.vue";
+import Header from "./containers/Header.vue";
+import Top from "./containers/Top.vue";
+import Footer from "./containers/Footer.vue";
+import About from "./containers/About.vue";
+import Skill from "./containers/Skill.vue";
+import Outputs from "./containers/Outputs.vue";
+import Links from "./containers/Links.vue";
+import Contact from "./containers/Contact.vue";
 
 import "normalize.css";
 
@@ -34,8 +36,8 @@ export default {
     About,
     Skill,
     Outputs,
-    Contact,
     Links,
+    Contact,
   },
   methods: {
     clickSmoothScroll(x) {
@@ -48,23 +50,51 @@ export default {
 
 
 <style>
+/* 
+カラーコードメモ
+
+・orange
+#EAA960 
+rgba(234, 169, 96, 1)
+hsv(32,59,92)
+
+・blue
+#68B6C8
+rgba(104, 182, 200, 1)
+hsv(191,48,78)
+
+・green
+#B1D7D1
+rgba(177, 215, 209, 1)
+hsv(171,18,84)
+
+・red
+#EB9898
+rgba(235, 152, 152, 1)
+hsv(0,35,92)
+
+・bg white
+#F7F0EF
+rgba(247, 240, 239, 1)
+hsv(7,3,97)
+ */
+
 /* GoogleFont */
-@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Sawarabi+Gothic&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&family=Sawarabi+Mincho&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Sawarabi+Gothic&family=Sawarabi+Mincho&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Recursive&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Recursive&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=M+PLUS+Rounded+1c&family=Recursive:wght@400&display=swap");
+
+/* @import url("https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap"); */
 
 #app {
-  font-family: "Kosugi Maru", sans-serif;
-  /* font-family: 'Recursive', sans-serif; */
+  /* font-family: "Recursive", "M PLUS 1p", sans-serif; */
+  font-family: "Recursive", "Kosugi Maru", sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  /* background-color: #f7f1f0; */
+  /* background-color: #f7f0ef; */
 }
 
 body:before {
@@ -77,32 +107,14 @@ body:before {
   height: 100%;
   background: linear-gradient(
       180deg,
-      rgba(247, 241, 240, 0.7),
-      rgba(247, 241, 240, 0.4)
+      rgba(247, 240, 239, 1),
+      rgba(247, 240, 239, 0.3)
     ),
     url("static/bg_awashima.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
 }
-
-/* #nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-} */
-
-/* .container{
-  margin: 0 10% 0 10%;
-  text-align: center;
-} */
 
 .box-wrapper {
   display: flex;
@@ -113,18 +125,20 @@ body:before {
   justify-content: center;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 850px) {
   .box-wrapper {
     padding: 0px 5% 0px 5%;
   }
 }
 
-
+.tweet,
+.workcard {
+  margin: 30px;
+  width: 320px;
+}
 
 .tweet {
   display: inline-block;
-  margin: 30px 30px;
-  width: 320px;
   height: auto;
 
   /* background: #fff; */
@@ -132,19 +146,66 @@ body:before {
   /* box-shadow: 0 2px 5px #ccc; */
 }
 
+#underline-o {
+  font-size: 1.1em;
+  background-image: linear-gradient(
+    transparent 80%,
+    rgba(234, 169, 96, 0.7) 30%
+  );
+}
+
+#underline-b {
+  font-size: 1.1em;
+  background-image: linear-gradient(
+    transparent 80%,
+    rgba(104, 182, 200, 0.7) 30%
+  );
+}
+
+#underline-g {
+  font-size: 1.1em;
+  background-image: linear-gradient(
+    transparent 80%,
+    rgba(177, 215, 209, 0.7) 30%
+  );
+}
+
+#underline-r {
+  font-size: 1.1em;
+  background-image: linear-gradient(
+    transparent 80%,
+    rgba(235, 152, 152, 0.7) 30%
+  );
+}
 
 /* 浮かせたいもの */
-.tweet, .workcard, #outputs-sub {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all .3s;
-    transition: all .3s;
+.tweet,
+.workcard,
+#outputs-sub,
+#head-button,
+.head-button-dropdown {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
-.tweet:hover, .workcard:hover, #outputs-sub:hover {
-  -webkit-transform: translateY(-5px);
-  -ms-transform: translateY(-5px);
-  transform: translateY(-5px);
+.tweet:hover,
+.workcard:hover,
+#outputs-sub:hover,
+#head-button:hover,
+.head-button-dropdown:hover {
+  -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
+@media screen and (max-width: 600px) {
+  #main-contents {
+    margin: 0px 5% 0px 5%;
+  }
+}
 </style>
+
+
+
