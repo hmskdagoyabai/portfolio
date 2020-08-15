@@ -28,16 +28,13 @@ export default {
 };
 </script>
 
-<style >
+<style scoped>
 .subtitle {
   padding: 65px 0 10px 0;
   margin: 40px 25% 20px 25%;
   position: relative;
-  /* font-size: 2em; */
   color: #333;
   border-bottom: #68b6c8 3px double;
-  /* text-align: center; */
-  /* white-space: nowrap; */
 }
 
 @media screen and (max-width: 500px) {
@@ -47,14 +44,12 @@ export default {
 }
 
 #subtitle_str {
-  /* font-family: 'Recursive', sans-serif; */
-  /* min-width: 150px; */
   text-align: center;
   white-space: nowrap;
 }
 
 #caption {
-  white-space: nowrap;
+  /* white-space: nowrap; */
   text-align: center;
 }
 </style>

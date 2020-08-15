@@ -138,67 +138,10 @@ export default {
   /* border-radius: 5px; */
 }
 
-/* .card__header {
-  position: relative;
-}
-
-.card__title {
-  padding: 1rem 1rem 0;
-  font-size: 1.25rem;
-}
-
-.card__thumbnail {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
-}
-
-.card__image {
-  width: 50%;
-  height: 50%;
-}
-
-.card__body {
-  padding: 1rem;
-}
-
-.card__text {
-  font-size: 0.75rem;
-}
-
-.card__text + .card__text {
-  margin-top: 0.5rem;
-}
-
-.card__text.-number {
-  text-align: right;
-}
-
-.card__footer {
-  padding: 1rem;
-  border-top: 1px solid #ddd;
-} */
-
 iframe {
   width: 100%;
   height: 200px;
 }
-
-/* .workcard {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-
-.workcard:hover {
-    -webkit-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    transform: translateY(-5px);
-} */
 
 .imgWrap {
   overflow: hidden;
@@ -211,10 +154,10 @@ iframe {
   transition-duration: 0.3s; /*変化に掛かる時間*/
   filter: contrast(100%) grayscale(70%);
 }
-.imgWrap img:hover {
+.workcard:hover .imgWrap img {
   transition-duration: 0.3s; /*変化に掛かる時間*/
   /* transform: scale(1.025); */
   /* opacity: 0.8; */
-  filter: contrast(110%) grayscale(0);
+  filter: contrast(100%) grayscale(0);
 }
 </style>

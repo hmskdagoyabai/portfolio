@@ -1,7 +1,6 @@
 <template>
   <div class="others">
-    <SubTitle title="Others" caption="その他のあれこれ" fa_icon="wifi" />
-    <!-- 以上の項目の<span id="underline-r">どれにも当てはまらない</span> ようなあれこれです。 -->
+    <SubTitle title="Others" caption="以上の項目のどれにもあてはまらないようなあれこれです。" fa_icon="wifi" />
     <div class="box-wrapper">
       <Tweet class="tweet" id="1278644790943350785"></Tweet>
       <WorkCard :item="tekuota" />

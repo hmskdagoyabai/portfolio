@@ -1,10 +1,6 @@
 <template>
   <div class="crafts">
-    <SubTitle title="Crafts" caption="つくったもの" fa_icon="ruler-combined" />
-    <!-- 主に
-    <span id="underline-r">プログラミング</span>や
-    <span id="underline-o">電子工作</span>
-    などをやっています。-->
+    <SubTitle title="Crafts" caption="つくったものたちです。" fa_icon="ruler-combined" />
     <div class="box-wrapper">
       <WorkCard :item="portfolio" />
       <WorkCard :item="YouTube.rina" />

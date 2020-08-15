@@ -6,8 +6,8 @@
       <About id="about"></About>
       <Skill id="skill"></Skill>
       <Outputs id="outputs"></Outputs>
-      <Links id="links"></Links>
       <Contact id="contact"></Contact>
+      <Links id="links"></Links>
     </div>
     <Footer id="footer"></Footer>
   </div>

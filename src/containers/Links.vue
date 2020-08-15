@@ -44,6 +44,6 @@ export default {
 
 <style>
 .links {
-  /* padding-bottom: 25%; */
+  padding-bottom: 15%;
 }
 </style>

@@ -1,10 +1,11 @@
 <template>
   <div id="note">
-    <SubTitle title="Diary" caption="日々の記録" fa_icon="book" />
-    <p>
-      <span id="underline-o">noteの最新記事</span>
-      を{{article_num}}件自動で取得し表示しています。
-    </p>
+    <SubTitle
+      title="Diary"
+      :caption="'noteの最新記事を'+ article_num + '件自動で取得し表示しています。'"
+      fa_icon="book"
+    />
+
     <div class="box-wrapper">
       <WorkCard v-for="note in notes" :key="note.title" :item="note" />
       <!-- <WorkCard :item="andmore" /> -->
@@ -27,7 +28,6 @@ export default {
     return {
       notes: [],
       article_num: 4,
-
       andmore: {
         img: require("@/static/yabaki.png"),
         caption:

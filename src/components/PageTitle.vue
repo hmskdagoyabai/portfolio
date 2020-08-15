@@ -34,7 +34,6 @@ export default {
   padding: 70px 0 20px 0;
   margin: 50px 15% 30px 15%;
   position: relative;
-  /* font-size: 2em; */
   color: #333;
   border-bottom: #eb9898 4px double;
   text-align: center;
@@ -46,22 +45,12 @@ export default {
   }
 }
 
-/*ウィンドウ幅が最大479pxまでの場合->スマホ用*/
-/* @media screen and (max-width: 479px) { 
-#fa-icon{
-     display:none;
-}
-} */
-
 #title_str {
-  /* font-family: 'Recursive', sans-serif; */
-  /* min-width: 150px; */
   white-space: nowrap;
   text-align: center;
 }
 
 #caption {
   font-family: "Kosugi Maru", sans-serif;
-  white-space: nowrap;
 }
 </style>

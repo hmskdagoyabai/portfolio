@@ -36,9 +36,8 @@
                 @click="clickSmoothScroll('#others')"
               >Others</b-dropdown-item>
             </b-nav-item-dropdown>
-
-            <b-nav-item id="head-button" href="#" @click="clickSmoothScroll('#links')">Links</b-nav-item>
             <b-nav-item id="head-button" href="#" @click="clickSmoothScroll('#contact')">Contact</b-nav-item>
+            <b-nav-item id="head-button" href="#" @click="clickSmoothScroll('#links')">Links</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>

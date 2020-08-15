@@ -1,11 +1,12 @@
 <template>
   <div class="skill">
     <pageTitle title="Skill" fa_icon="brain" caption="できること" />
-    <p>
+    <!-- <p>
       <span id="underline-r">「完全に理解した」</span>ものから
       <span id="underline-g">「何もわからない」</span>ものまで。
-    </p>
-    <SubTitle title="Development " fa_icon="code" />
+    </p>-->
+
+    <SubTitle title="Development " fa_icon="code" id="skill-development" />
 
     <NomalContent :items="Developments" />
 
@@ -16,7 +17,7 @@
     </div>
     <NomalContent :items="Adobes" />-->
 
-    <SubTitle title="Other" fa_icon="tags" />
+    <SubTitle title="Other" fa_icon="tags" id="skill-other" />
     <NomalContent :items="Others" />
   </div>
 </template>
@@ -35,6 +36,8 @@ export default {
   data() {
     return {
       Developments: [
+        { key: "OS", value: "Windows, Ubuntu, CentOS, RHEL", url: "" },
+
         {
           key: "言語",
           value: "Python, C, html, javascript, java, Googe Apps Script ",
@@ -46,16 +49,17 @@ export default {
             "AWS,  Git, MySQL, docker, flask, Vue.js, Arduino, Raspberry Pi, Fusion360",
           url: "",
         },
-        { key: "OS", value: "Windows, Ubuntu, CentOS", url: "" },
-      ],
-
-      Others: [
-        { key: "Music", value: "Bass, Ukulele", url: "" },
         {
-          key: "Adobe",
+          key: "Adobe Softwares",
           value: "Premiere, After Effects, Photoshop, Illustrator",
           url: "",
         },
+      ],
+
+      Others: [
+        { key: "楽器", value: "Bass, Ukulele, Guitar", url: "" },
+
+        { key: "料理", value: "オムライス", url: "" },
       ],
     };
   },
@@ -63,5 +67,9 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
+#skill-development {
+  padding: 10px 0 10px 0;
+  margin: 40px 25% 20px 25%;
+}
 </style>

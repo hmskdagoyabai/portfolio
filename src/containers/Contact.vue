@@ -5,7 +5,7 @@
       お名前はペンネームで構いません。また、ご連絡先は入力必須ではありませんが返信が必要な場合は必ず入力をお願い致します。（メールアドレスやTwitterのアカウントなど連絡可能であれば形式は問いません。）
       <br />ご連絡先をご入力頂いても返信できかねる場合がありますので、予めご了承いただきますようお願い申し上げます。
     </p>
-    <span id="underline-o">ご連絡お待ちしております！</span>
+    <!-- <span id="underline-o">ご連絡お待ちしております！</span> -->
     <form
       action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSew2ReidByTovAq5Aww9zNw8AFjOpMKg7wNKQ8GDK5FkRVjbQ/formResponse"
       target="_self"
@@ -62,10 +62,6 @@ export default {
 -->
 
 <style scoped>
-.contact {
-  padding-bottom: 10%;
-}
-
 form {
   /* height: auto; */
   background: rgba(247, 240, 239, 0.6);
