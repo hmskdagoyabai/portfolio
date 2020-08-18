@@ -1,14 +1,11 @@
 <template>
   <div class="bass">
-    <SubTitle title="Bass Plays" caption="YouTubeやTwitterで弾いたものたちです。" fa_icon="guitar" />ベースを弾きます。
+    <SubTitle title="Bass Plays" caption="YouTubeやTwitterで弾いたものたちです。" fa_icon="guitar" />
     <div class="box-wrapper">
       <WorkCard :item="YouTube.bass1" />
       <WorkCard :item="YouTube.bass2" />
-      <Tweet class="tweet" id="1288503454613139456"></Tweet>
-      <Tweet class="tweet" id="1061495510320594944"></Tweet>
-      <WorkCard :item="YouTube.bass3" />
-
-      <Tweet class="tweet" id="1116571467649433600"></Tweet>
+      <Tweet class="tweet" v-for="tweet in Tweets" :id="tweet" :key="tweet"></Tweet>
+      <!-- <WorkCard :item="YouTube.bass3" /> -->
     </div>
   </div>
 </template>
@@ -26,6 +23,11 @@ export default {
   },
   data() {
     return {
+      Tweets: [
+        "1116571467649433600",
+        // "1061495510320594944",
+        "1288503454613139456",
+      ],
       YouTube: {
         bass1: {
           videoID: "ma5EGlU37A4",

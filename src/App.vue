@@ -205,6 +205,13 @@ body:before {
     margin: 0px 5% 0px 5%;
   }
 }
+
+/* a:hover {
+  background-image: linear-gradient(
+    transparent 80%,
+    rgba(104, 182, 200, 0.7) 30%
+  );
+} */
 </style>
 
 

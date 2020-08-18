@@ -7,8 +7,8 @@ import App from './App.vue'
 
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css' 
-import BootstrapVue from 'bootstrap-vue'  
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import BootstrapVue from 'bootstrap-vue'
 Vue.use(BootstrapVue)
 
 // スクロール 参考:https://qiita.com/shuheq/items/5d905e1c0f9916496485
@@ -32,6 +32,8 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 /* ここまで */
 
 
+
+
 import VueTyperPlugin from 'vue-typer'
 Vue.use(VueTyperPlugin)
 
@@ -48,8 +50,8 @@ Vue.use(VueTyperPlugin)
 
 // axios
 import axios from 'axios'
-import VueAxios from 'vue-axios' 
-Vue.use(VueAxios, axios) 
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
 
 
 

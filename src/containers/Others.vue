@@ -1,6 +1,6 @@
 <template>
   <div class="others">
-    <SubTitle title="Others" caption="以上の項目のどれにもあてはまらないようなあれこれです。" fa_icon="wifi" />
+    <SubTitle title="Others" caption="他にもあれこれやっています。" fa_icon="wifi" />
     <div class="box-wrapper">
       <Tweet class="tweet" id="1278644790943350785"></Tweet>
       <WorkCard :item="tekuota" />
@@ -23,7 +23,8 @@ export default {
     return {
       tekuota: {
         videoID: "Wkzxlhyrhq0",
-        caption: "旅",
+        caption:
+          "熊本に住んでいたころに４泊５日で東京や沼津を駆け回った時の動画です。GoProは優秀。",
         title: "【聖地巡礼？】オタク沼津･東京4泊5日旅！前編",
         links: [
           {

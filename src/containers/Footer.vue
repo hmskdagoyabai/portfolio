@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <img src="@/static/apple-touch-icon.png" />
-    Copyright © 2020 Seaside Works. All Rights Reserved.
+    <p>Copyright © 2020 Seaside Works. All Rights Reserved.</p>
   </div>
 </template>
 
@@ -22,6 +22,7 @@
   height: 100px;
   z-index: 1;
   color: rgb(49, 49, 49);
+  padding-bottom: 10px;
 }
 
 .footer img {

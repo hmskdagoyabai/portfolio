@@ -3,22 +3,62 @@
     <div class="banner">
       <img id="hamabe_img" src="../static/hamabe.png" />
     </div>
-    <p id="welcome">
-      <span id="underline-o">はま浜辺</span>へようこそ！
-      <!-- <br />Welcome to
-      <span id="underline-b">Seaside Works.</span>-->
-    </p>
-
-    <!-- <vue-typer
-      :text="['Welcome to Hama\'s Seaside Works.']"
-      class="seaside"
-      :repeat="0"
-    ></vue-typer>-->
+    <!-- <p id="welcome">
+      <span id="underline-o">はま浜辺</span>
+      へようこそ！
+    </p>-->
+    <div class="news">
+      <h5 id="subtitle">
+        <font-awesome-icon id="fa-icon" icon="wifi" />&nbsp;
+        更新情報
+      </h5>
+    </div>
+    <!-- <lu id="caption">
+      <li>
+        <a href="#" @click="clickSmoothScroll('#outputs')">hoge</a>にhugaを追加しました
+      </li>
+      <li>
+        <a href="#" @click="clickSmoothScroll('#crafts')">hoge</a>
+        にhugaを追加しました2
+      </li>
+    </lu>-->
+    <News :items="News"></News>
   </div>
 </template>
 
 
 <script>
+// import SubTitle from "../components/SubTitle.vue";
+// import NomalContent from "../components/NomalContents.vue";
+
+import News from "../components/News.vue";
+
+export default {
+  components: {
+    // SubTitle,
+    // NomalContent,
+    News,
+  },
+  methods: {
+    clickSmoothScroll(x) {
+      event.preventDefault();
+      this.$SmoothScroll(document.querySelector(x), 800, null, null, "y");
+    },
+  },
+  data() {
+    return {
+      News: [
+        { key: "OS", value: "Windows, Ubuntu, CentOS, RHEL", url: "" },
+
+        {
+          key: "言語",
+          value: "Python, C, html, javascript, java, Googe Apps Script ",
+          url: "",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 
@@ -38,5 +78,19 @@
 
 #welcome {
   font-size: 1.2em;
+}
+
+#subtitle {
+  margin: 20px 35% 20px 35%;
+  position: relative;
+  color: #333;
+
+  border-bottom: rgba(234, 169, 96, 1) 3px double;
+}
+
+@media screen and (max-width: 500px) {
+  #subtitle {
+    margin: 20px 15% 20px 15%;
+  }
 }
 </style>

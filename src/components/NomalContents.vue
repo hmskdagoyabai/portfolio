@@ -77,5 +77,29 @@ a:visited,
 a:hover,
 a:active {
   color: inherit;
+  text-decoration: none;
+}
+
+a {
+  position: relative;
+  /* display: inline-block; */
+  text-decoration: none;
+}
+a::after {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: rgba(234, 169, 96, 0.7) 30%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+a:hover::after {
+  bottom: 0px;
+  opacity: 1;
+  visibility: visible;
 }
 </style>

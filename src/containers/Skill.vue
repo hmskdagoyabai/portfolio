@@ -46,17 +46,17 @@ export default {
         {
           key: "ツール・フレームワーク",
           value:
-            "AWS,  Git, MySQL, docker, flask, Vue.js, Arduino, Raspberry Pi, Fusion360",
-          url: "",
-        },
-        {
-          key: "Adobe Softwares",
-          value: "Premiere, After Effects, Photoshop, Illustrator",
+            "AWS,  Git, MySQL, docker, flask, Vue.js, Arduino, Raspberry Pi",
           url: "",
         },
       ],
 
       Others: [
+        {
+          key: "Adobe Softwares",
+          value: "Premiere, After Effects, Photoshop, Illustrator",
+          url: "",
+        },
         { key: "楽器", value: "Bass, Ukulele, Guitar", url: "" },
 
         { key: "料理", value: "オムライス", url: "" },

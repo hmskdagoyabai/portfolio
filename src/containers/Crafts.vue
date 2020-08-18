@@ -1,6 +1,6 @@
 <template>
   <div class="crafts">
-    <SubTitle title="Crafts" caption="つくったものたちです。" fa_icon="ruler-combined" />
+    <SubTitle title="Crafts" caption="ハード系のつくったものたちです。" fa_icon="ruler-combined" />
     <div class="box-wrapper">
       <WorkCard :item="portfolio" />
       <WorkCard :item="YouTube.rina" />
@@ -24,8 +24,8 @@ export default {
   data() {
     return {
       tweets: [
-        "1259419595019976704",
-        "1013414593773748224",
+        // "1259419595019976704",
+        // "1013414593773748224",
         "1261539238958362624",
         "1068140620084994050",
       ],
@@ -94,23 +94,6 @@ export default {
             },
           ],
         },
-      },
-      portfolio: {
-        img: require("@/static/hamabe.png"),
-        caption:
-          "このページです。フロントエンドは完全未経験だったので、Vue.jsの勉強を兼ねて1週間ほどで作成しました。AWS S3にデプロイし、Route53で独自ドメイン割当て、およびACM・CloudFrontによるSSL対応も行っています。",
-        title: "ポートフォリオ はま浜辺",
-        links: [
-          {
-            type: "",
-            link: "https://hmsk.work/",
-          },
-          {
-            type: "Qiita",
-            link: "https://qiita.com/hamahamabe/items/9216df345bb908eb5199",
-          },
-        ],
-        keywords: ["Vue.js", "ポートフォリオ", "フロントエンド", "AWS"],
       },
 
       works: {

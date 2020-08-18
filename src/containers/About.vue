@@ -1,16 +1,17 @@
 <template>
   <div class="about">
     <pageTitle title="About" fa_icon="coffee" caption="誰？なに？" />
+    <!-- <img src="@/static/apple-touch-icon.png" /> -->
 
-    <!-- <div class="about-body">
-      <span id="underline-b">
-        はま浜辺
-      </span> とは僕が良かれと思ってやったことたちの記録の場所です。
-      <br />基本方針は
-      <span id="underline-o">楽しさ重視</span>です。
-    </div>-->
-    <!-- <SubTitle title="Keywords" /> -->
-    <NomalContent :items="items" />
+    <div class="container" id="card-footer">
+      <div class="row">
+        <!-- <div class="col">
+        </div>-->
+        <div class="col">
+          <NomalContent :items="items" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -31,13 +32,13 @@ export default {
         {
           key: "はま",
           value:
-            "このページの管理人です。プログラムを書いたりベースを弾いたり電子工作をしたりアニメを観たり旅をしたりしています。熊本出身です。こんにちは。",
+            "私です。こんにちは。プログラムを書いたりベースを弾いたり電子工作をしたりアニメを観たり旅をしたりすることが好きです。",
         },
 
         {
           key: "はま浜辺",
           value:
-            "2018年1月某日、「はま」が「ベースを弾く」という意味で「はまベ」（ベはカタカナ）という名前のYouTubeチャンネルを作ったのが始まりです。途中でなんとなく「はま浜辺」に改名し、今でははまの活動全般を包括する概念（？）となっています。",
+            "はまの活動全般を包括する概念（？）でありYouTubeのチャンネル名でもあります。",
         },
         {
           key: "Seaside Works.",
@@ -45,11 +46,11 @@ export default {
             "それっぽい英語の別名が欲しいと思って適当に付けました。はま浜辺と同義です。英語表記の方がイケてる気がした時に使います。",
         },
 
-        {
-          key: "楽しさ重視",
-          value:
-            "全ての活動は 「大変さ < 楽しさ」 であるべき、という基本方針に基づいています。ほぼ趣味なので当然だけど！",
-        },
+        // {
+        //   key: "楽しさ重視",
+        //   value:
+        //     "全ての活動は 「大変さ < 楽しさ」 であるべき、という基本方針に基づいています。ほぼ趣味なので当然だけど！",
+        // },
         {
           key: "アンストッパブル濱本",
           value:
@@ -63,6 +64,10 @@ export default {
 
 
 <style scoped>
+.about img {
+  width: 200px;
+}
+
 .about-body {
   /* margin-left: 20%;
   margin-right: 20%;

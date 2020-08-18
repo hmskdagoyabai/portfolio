@@ -2,8 +2,9 @@
   <div class="contact">
     <pageTitle title="Contact" fa_icon="envelope" caption="感想・お問合せ・ご依頼などはこちらから" />
     <p id="caution">
-      お名前はペンネームで構いません。また、ご連絡先は入力必須ではありませんが返信が必要な場合は必ず入力をお願い致します。（メールアドレスやTwitterのアカウントなど連絡可能であれば形式は問いません。）
-      <br />ご連絡先をご入力頂いても返信できかねる場合がありますので、予めご了承いただきますようお願い申し上げます。
+      TwitterのDMでのご連絡も受け付けております。お名前はペンネーム等でも構いません。
+      <br />ご連絡先は入力必須ではありませんが、返信が必要な場合は必ず入力をお願い致します。
+      ご連絡先を入力頂いても返信できかねる場合がありますので予めご了承ください。
     </p>
     <!-- <span id="underline-o">ご連絡お待ちしております！</span> -->
     <form
@@ -17,8 +18,8 @@
         <input type="name" class="form-control" id="form-name" name="entry.443865513" required />
       </div>
       <div class="form-group">
-        <label for="form-email">ご連絡先</label>
-        <input class="form-control" id="form-email" name="entry.1543898776" />
+        <label for="form-email">ご連絡先(メールアドレス)</label>
+        <input class="form-control" type="email" id="form-email" name="entry.1543898776" />
       </div>
 
       <div class="form-group">

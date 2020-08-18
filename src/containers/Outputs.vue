@@ -4,23 +4,29 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          いろいろあるので以下の4種類に分けています。
+          いろいろあるので以下の5種類に分けています。
           <span id="underline-o">興味のあるもの</span>を覗いてみてください。
         </div>
       </div>
 
       <div class="row">
         <!-- Outputs サブリンク -->
+        <div class="col-md" id="outputs-sub" href="#" @click="clickSmoothScroll('#applicatioins')">
+          <span id="outputs-sub-title">Applications</span>
+          <br />つくったもの（ソフト系）
+        </div>
+
         <div class="col-md" id="outputs-sub" href="#" @click="clickSmoothScroll('#crafts')">
           <span id="outputs-sub-title">Crafts</span>
-          <br />つくったもの
+          <br />つくったもの（ハード系）
         </div>
 
         <div class="col-md" id="outputs-sub" href="#" @click="clickSmoothScroll('#bass')">
           <span id="outputs-sub-title">Bass Plays</span>
           <br />弾いたもの
         </div>
-
+      </div>
+      <div class="row">
         <div class="col-md" id="outputs-sub" href="#" @click="clickSmoothScroll('#notes')">
           <span id="outputs-sub-title">Diary</span>
           <br />日々の記録
@@ -33,6 +39,9 @@
       </div>
     </div>
 
+    <div class="applicationss" id="applications">
+      <Applications></Applications>
+    </div>
     <div class="crafts" id="crafts">
       <Crafts></Crafts>
     </div>
@@ -55,6 +64,7 @@
 import PageTitle from "../components/PageTitle.vue";
 import Note from "./Note.vue";
 import Crafts from "./Crafts.vue";
+import Applications from "./Applications.vue";
 import Bass from "./Bass.vue";
 import Others from "./Others.vue";
 // import SubTitle from "../components//SubTitle.vue";
@@ -71,6 +81,7 @@ export default {
     Crafts,
     Bass,
     Others,
+    Applications,
   },
   methods: {
     clickSmoothScroll(x) {

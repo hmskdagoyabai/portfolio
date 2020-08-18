@@ -17,11 +17,6 @@ export default {
   data() {
     return {
       items: [
-        { key: "Twitter", url: "https://twitter.com/ybybybmh" },
-        {
-          key: "YouTube",
-          url: "https://www.youtube.com/channel/UC3ZUoqmcSSYIuvhLg8U6eoQ",
-        },
         {
           key: "GitHub",
           url: "https://github.com/hmskdagoyabai",
@@ -31,6 +26,12 @@ export default {
           key: "Qiita",
           url: "https://qiita.com/hamahamabe",
         },
+        {
+          key: "YouTube",
+          url: "https://www.youtube.com/channel/UC3ZUoqmcSSYIuvhLg8U6eoQ",
+        },
+        { key: "Twitter", url: "https://twitter.com/ybybybmh" },
+
         {
           key: "note",
           url: "https://note.com/hmskdagoyabai",

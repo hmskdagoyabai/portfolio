@@ -22,6 +22,11 @@
               <b-dropdown-item
                 id="head-button"
                 href="#"
+                @click="clickSmoothScroll('#applications')"
+              >Applications</b-dropdown-item>
+              <b-dropdown-item
+                id="head-button"
+                href="#"
                 @click="clickSmoothScroll('#crafts')"
               >Crafts</b-dropdown-item>
               <b-dropdown-item
@@ -61,7 +66,7 @@ export default {
 .header {
   /* font-family: "M PLUS 1p", sans-serif; */
   /* background-color:#ebbbbb; */
-  background: linear-gradient(90deg, #ffffff, #ebf7fa);
+  background: linear-gradient(90deg, #ffffff, #ebf7fa 80%, #88d4e6);
   /* background: linear-gradient(0deg, #f7f0ef, #f7f0ef); */
   /* background: transparent; */
   /* background-color: #f7f0ef; */
