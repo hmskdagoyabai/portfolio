@@ -32,7 +32,7 @@ export default {
           links: [
             {
               type: "",
-              link: "https://hmsk.work/",
+              link: "https://hamabe.info",
             },
             {
               type: "Qiita",

@@ -1,6 +1,6 @@
 <template>
   <div class="bass">
-    <SubTitle title="Bass Plays" caption="YouTubeやTwitterで弾いたものたちです。" fa_icon="guitar" />
+    <SubTitle title="Bass Plays" caption="YouTubeやTwitterで弾いたものたち(のほんの一部)です。" fa_icon="guitar" />
     <div class="box-wrapper">
       <WorkCard :item="YouTube.bass1" />
       <WorkCard :item="YouTube.bass2" />
