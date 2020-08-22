@@ -31,10 +31,6 @@ export default {
           title: "ポートフォリオ はま浜辺",
           links: [
             {
-              type: "",
-              link: "https://hamabe.info",
-            },
-            {
               type: "Qiita",
               link: "https://qiita.com/hamahamabe/items/9216df345bb908eb5199",
             },
@@ -42,49 +38,32 @@ export default {
           keywords: ["Vue.js", "ポートフォリオ", "フロントエンド", "AWS"],
         },
 
-        work2: {
-          img: require("@/static/rina.jpg"),
-          caption:
-            "Arduinoを使ってラブライブ！虹ヶ咲学園スクールアイドル同好会に登場する璃奈ちゃんボードを作成しました。",
-          title: "あいう",
-          links: [
-            {
-              type: "YouTube",
-              link: "https://twitter.com/home",
-            },
-            {
-              type: "YouTube",
-              link: "https://twitter.com/home",
-            },
-          ],
-        },
-        woork3: {
-          img: require("@/static/view-o.jpg"),
-          caption: "あああああああああああああああああああああああ",
-          title: "dadadad",
-          links: [
-            {
-              type: "Twitter",
-              link: "https://twitter.com/home",
-            },
-          ],
-        },
-        work4: {
-          img: require("@/static/board.jpg"),
-          caption:
-            "ラブライブ！虹ヶ咲学園スクールアイドル同好会に登場する天王寺璃奈ちゃんが愛用している「オートエモーションコンバート璃奈ちゃんボード」を作成しました。Arduino,3Dプリンタなど",
-          title: "test",
-          links: [
-            {
-              type: "YouTube",
-              link: "https://youtu.be/0yT_qYHqlOU",
-            },
-            {
-              type: "Qiita",
-              link: "https://qiita.com/hamahamabe/items/9216df345bb908eb5199",
-            },
-          ],
-        },
+        // woork3: {
+        //   img: require("@/static/view-o.jpg"),
+        //   caption: "あああああああああああああああああああああああ",
+        //   title: "dadadad",
+        //   links: [
+        //     {
+        //       type: "Twitter",
+        //       link: "https://twitter.com/home",
+        //     },
+        //   ],
+        // },
+        // work4: {
+        //   img: require("@/static/board.jpg"),
+        //   caption: "hohhogegege",
+        //   title: "test",
+        //   links: [
+        //     {
+        //       type: "YouTube",
+        //       link: "https://youtu.be/0yT_qYHqlOU",
+        //     },
+        //     {
+        //       type: "Qiita",
+        //       link: "https://qiita.com/hamahamabe/items/9216df345bb908eb5199",
+        //     },
+        //   ],
+        // },
       },
     };
   },

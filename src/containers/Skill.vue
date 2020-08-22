@@ -40,13 +40,13 @@ export default {
 
         {
           key: "言語",
-          value: "Python, C, html, javascript, java, Googe Apps Script ",
+          value: "Python, java, javascript, html, C, Google Apps Script ",
           url: "",
         },
         {
           key: "ツール・フレームワーク",
           value:
-            "AWS,  Git, MySQL, docker, flask, Vue.js, Arduino, Raspberry Pi",
+            "AWS,  Git, MySQL, docker, flask, Vue.js, Arduino, Raspberry Pi, Heroku",
           url: "",
         },
       ],
@@ -57,6 +57,7 @@ export default {
           value: "Premiere, After Effects, Photoshop, Illustrator",
           url: "",
         },
+        { key: "3DCAD", value: "Fusion360", url: "" },
         { key: "楽器", value: "Bass, Ukulele, Guitar", url: "" },
 
         { key: "料理", value: "オムライス", url: "" },

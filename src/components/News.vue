@@ -15,15 +15,15 @@
         <div class="col-sm-3" id="body">{{ item.body }}</div>
         <div class="col-sm-2"></div>
       </div>
-      <div class="row" v-if="News_old  &&  showAll === false">
-        <div class="col-sm" id="view">
-          <a v-on:click="toggleNewsView()">全ての更新履歴を表示</a>
+
+      <div v-if="News_old  &&  showAll === false">
+        <div class="row">
+          <div class="col-sm" id="view">
+            <a v-on:click="toggleNewsView()">全ての更新履歴を表示</a>
+          </div>
         </div>
       </div>
-    </div>
-
-    <transition>
-      <div class="container" v-if="showAll === true">
+      <div v-else-if="showAll">
         <div class="row" v-for="item in News_old" :key="item">
           <div class="col-sm-2"></div>
 
@@ -38,13 +38,14 @@
           <div class="col-sm-3" id="body">{{ item.body }}</div>
           <div class="col-sm-2"></div>
         </div>
+
         <div class="row">
           <div class="col-sm" id="view">
             <a v-on:click="toggleNewsView()">一部を表示</a>
           </div>
         </div>
       </div>
-    </transition>
+    </div>
   </div>
 </template>
 
@@ -62,19 +63,25 @@ export default {
       showAll: false,
       News: [
         {
+          date: "2020/8/22",
+          type: "Others",
+          dist: "#others",
+          body: "Twitterモーメントを追加しました。",
+        },
+      ],
+      News_old: [
+        {
           date: "2020/8/20",
           type: "Outputs",
           dist: "#outputs",
           body: "項目分けを修正しました。",
         },
-
         {
           date: "2020/8/20",
           type: "全体",
           body: "本ページを公開しました。",
         },
       ],
-      // News_old: [],
     };
   },
   methods: {
@@ -90,7 +97,7 @@ export default {
 </script>
 
 <style scoped>
-.v-enter {
+/* .v-enter {
   opacity: 0;
 }
 .v-enter-active {
@@ -107,7 +114,7 @@ export default {
 }
 .v-leave-to {
   opacity: 0;
-}
+} */
 
 .container {
   text-align: left;

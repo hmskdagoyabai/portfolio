@@ -4,7 +4,8 @@
       <b-navbar toggleable="lg" type="light">
         <div href="#" @click="clickSmoothScroll('#app')">
           <span id="brand_title">
-            <font-awesome-icon icon="wifi" id="icon" />はま浜辺
+            <!-- <font-awesome-icon icon="wifi" id="icon" /> -->
+            はま浜辺
           </span>
           <span id="brand_subtitle">Hama's Seaside Works.</span>
         </div>
@@ -79,7 +80,7 @@ export default {
 }
 
 #brand_title {
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: rgb(73, 68, 60);
   margin-right: 5px;
 }
