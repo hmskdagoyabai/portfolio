@@ -3,10 +3,6 @@
     <div class="banner">
       <img id="hamabe_img" src="../static/hamabe.png" />
     </div>
-    <!-- <p id="welcome">
-      <span id="underline-o">はま浜辺</span>
-      へようこそ！
-    </p>-->
     <div class="news">
       <h5 id="subtitle">
         <font-awesome-icon id="fa-icon" icon="wifi" />&nbsp;
@@ -28,15 +24,10 @@
 
 
 <script>
-// import SubTitle from "../components/SubTitle.vue";
-// import NomalContent from "../components/NomalContents.vue";
-
 import News from "../components/News.vue";
 
 export default {
   components: {
-    // SubTitle,
-    // NomalContent,
     News,
   },
   methods: {

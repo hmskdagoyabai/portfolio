@@ -62,6 +62,12 @@ export default {
     return {
       showAll: false,
       News: [
+                {
+          date: "2020/9/3",
+          type: "Applications",
+          dist: "#applications",
+          body: "†ちょっと尖ったハンネメーカー†を追加しました。",
+        },
         {
           date: "2020/8/22",
           type: "Others",
@@ -97,24 +103,6 @@ export default {
 </script>
 
 <style scoped>
-/* .v-enter {
-  opacity: 0;
-}
-.v-enter-active {
-  transition: opacity 1s;
-}
-.v-enter-to {
-  opacity: 1;
-}
-.v-leave {
-  opacity: 1;
-}
-.v-leave-active {
-  transition: opacity 1s;
-}
-.v-leave-to {
-  opacity: 0;
-} */
 
 .container {
   text-align: left;

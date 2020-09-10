@@ -1,22 +1,8 @@
 <template>
   <div class="skill">
     <pageTitle title="Skill" fa_icon="brain" caption="できること" />
-    <!-- <p>
-      <span id="underline-r">「完全に理解した」</span>ものから
-      <span id="underline-g">「何もわからない」</span>ものまで。
-    </p>-->
-
     <SubTitle title="Development " fa_icon="code" id="skill-development" />
-
     <NomalContent :items="Developments" />
-
-    <!-- <div class="subtitle">
-      <h4 id="subtitle_str">
-        <font-awesome-icon :icon="['fab', 'adobe']" />&nbsp;Adobe
-      </h4>
-    </div>
-    <NomalContent :items="Adobes" />-->
-
     <SubTitle title="Other" fa_icon="tags" id="skill-other" />
     <NomalContent :items="Others" />
   </div>

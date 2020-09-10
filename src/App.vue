@@ -82,12 +82,8 @@ hsv(7,3,97)
 /* GoogleFont */
 @import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=M+PLUS+Rounded+1c&family=Recursive:wght@400&display=swap");
 
-/* @import url("https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap"); */
 
 #app {
-  /* font-family: "Recursive", "M PLUS 1p", sans-serif; */
   font-family: "Recursive", "Kosugi Maru", sans-serif;
 
   -webkit-font-smoothing: antialiased;

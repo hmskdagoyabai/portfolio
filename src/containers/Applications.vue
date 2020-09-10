@@ -24,7 +24,26 @@ export default {
       tweets: [],
 
       works: {
-        portfolio: {
+
+        hannne: {
+          img: require("@/static/hanne.png"),
+          caption:
+            "カタカナ語+名字のイカしたハンドルネームを生成してくれるサイトです。S3に公開したSPAとAPIGateway+Lambda+DynamoDBで作ったREST APIでできています。スクレイピングもしました。",
+          title: "†ちょっと尖ったハンネメーカー†",
+          links: [
+           {
+              type: "†ちょっと尖ったハンネメーカー†",
+              link: "https://togattahanne.hamabe.info",
+            },
+            {
+              type: "Qiita",
+              link: "https://qiita.com/hamahamabe/items/06525aad177a3ead88b9",
+            },
+
+          ],
+          keywords: ["Vue.js", "AWS","S3","CloudFront","API Gateway","Lambda","DynamoDB"] ,
+        },
+                portfolio: {
           img: require("@/static/hamabe.png"),
           caption:
             "このページです。フロントエンドは完全未経験だったので、Vue.jsの勉強を兼ねて1週間ほどで作成しました。AWS S3にデプロイし、Route53で独自ドメイン割当て、およびACM・CloudFrontによるSSL対応も行っています。",
@@ -32,38 +51,16 @@ export default {
           links: [
             {
               type: "Qiita",
-              link: "https://qiita.com/hamahamabe/items/9216df345bb908eb5199",
+              link: "https://qiita.com/hamahamabe/items/465a8ac1a5f929e10fed",
+            },
+                        {
+              type: "はま浜辺",
+              link: "https://hamabe.info",
             },
           ],
           keywords: ["Vue.js", "ポートフォリオ", "フロントエンド", "AWS"],
         },
 
-        // woork3: {
-        //   img: require("@/static/view-o.jpg"),
-        //   caption: "あああああああああああああああああああああああ",
-        //   title: "dadadad",
-        //   links: [
-        //     {
-        //       type: "Twitter",
-        //       link: "https://twitter.com/home",
-        //     },
-        //   ],
-        // },
-        // work4: {
-        //   img: require("@/static/board.jpg"),
-        //   caption: "hohhogegege",
-        //   title: "test",
-        //   links: [
-        //     {
-        //       type: "YouTube",
-        //       link: "https://youtu.be/0yT_qYHqlOU",
-        //     },
-        //     {
-        //       type: "Qiita",
-        //       link: "https://qiita.com/hamahamabe/items/9216df345bb908eb5199",
-        //     },
-        //   ],
-        // },
       },
     };
   },
