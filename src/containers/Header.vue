@@ -89,6 +89,11 @@ export default {
   color: rgb(85, 85, 85);
   margin-right: 30px;
 }
+@media screen and (max-width: 400px) {
+  #brand_subtitle {
+    display: none;
+  }
+}
 
 #nav-collapse {
   margin-left: auto;
