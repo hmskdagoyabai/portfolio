@@ -1,9 +1,14 @@
 <template>
   <div class="others">
-    <SubTitle title="Others" caption="他にもあれこれやっています。" fa_icon="wifi" />
+    <SubTitle
+      title="Others"
+      caption="他にもあれこれやっています。"
+      fa_icon="wifi"
+    />
     <div class="box-wrapper">
       <WorkCard :item="tekuota" />
       <WorkCard :item="rina" />
+      <WorkCard :item="taneof" />
       <WorkCard :item="moment" />
       <!-- <Tweet class="tweet" id="1278644790943350785"></Tweet> -->
     </div>
@@ -48,6 +53,17 @@ export default {
           {
             type: "後編",
             link: "https://www.youtube.com/watch?v=zzLMSEMqVHo",
+          },
+        ],
+      },
+      taneof: {
+        videoID: "vlXkkCFn2cI",
+        caption: "架空のラジオ番組です。なにこれ？",
+        title: "#1「やったねオブザイヤー」",
+        links: [
+          {
+            type: "YouTube",
+            link: "https://youtu.be/vlXkkCFn2cI",
           },
         ],
       },

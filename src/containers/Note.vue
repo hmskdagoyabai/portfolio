@@ -2,7 +2,9 @@
   <div id="note">
     <SubTitle
       title="Diary"
-      :caption="'noteの最新記事を'+ article_num + '件自動で取得し表示しています。'"
+      :caption="
+        'noteの最新記事を' + article_num + '件自動で取得し表示しています。'
+      "
       fa_icon="book"
     />
 
@@ -73,6 +75,7 @@ export default {
               response.data.data.contents[i].key,
           });
           note.keywords = [];
+
           for (
             let hi = 0;
             hi < response.data.data.contents[i].hashtags.length;
@@ -82,6 +85,9 @@ export default {
               response.data.data.contents[i].hashtags[hi].hashtag.name.substr(1)
             );
           }
+          note.keywords.push(
+            response.data.data.contents[i].publishAt.substr(0, 10)
+          );
 
           this.notes.push(note);
         }

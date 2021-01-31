@@ -8,15 +8,17 @@
           <span id>{{ item.date }}</span>
         </div>
         <div class="col-sm-2" id="type">
-          <a v-if="item.dist" href="#" @click="clickSmoothScroll(item.dist)">{{item.type}}</a>
-          <a v-else>{{item.type}}</a>
+          <a v-if="item.dist" href="#" @click="clickSmoothScroll(item.dist)">{{
+            item.type
+          }}</a>
+          <a v-else>{{ item.type }}</a>
         </div>
 
         <div class="col-sm-3" id="body">{{ item.body }}</div>
         <div class="col-sm-2"></div>
       </div>
 
-      <div v-if="News_old  &&  showAll === false">
+      <div v-if="News_old && showAll === false">
         <div class="row">
           <div class="col-sm" id="view">
             <a v-on:click="toggleNewsView()">全ての更新履歴を表示</a>
@@ -31,8 +33,13 @@
             <span id>{{ item.date }}</span>
           </div>
           <div class="col-sm-2" id="type">
-            <a v-if="item.dist" href="#" @click="clickSmoothScroll(item.dist)">{{item.type}}</a>
-            <a v-else>{{item.type}}</a>
+            <a
+              v-if="item.dist"
+              href="#"
+              @click="clickSmoothScroll(item.dist)"
+              >{{ item.type }}</a
+            >
+            <a v-else>{{ item.type }}</a>
           </div>
 
           <div class="col-sm-3" id="body">{{ item.body }}</div>
@@ -62,20 +69,26 @@ export default {
     return {
       showAll: false,
       News: [
-                {
+        {
+          date: "2020/12/23",
+          type: "Others",
+          dist: "#others",
+          body: "#1「やったねオブザイヤー」を追加しました。",
+        },
+        {
           date: "2020/9/3",
           type: "Applications",
           dist: "#applications",
           body: "†ちょっと尖ったハンネメーカー†を追加しました。",
         },
+      ],
+      News_old: [
         {
           date: "2020/8/22",
           type: "Others",
           dist: "#others",
           body: "Twitterモーメントを追加しました。",
         },
-      ],
-      News_old: [
         {
           date: "2020/8/20",
           type: "Outputs",
@@ -103,7 +116,6 @@ export default {
 </script>
 
 <style scoped>
-
 .container {
   text-align: left;
 }
