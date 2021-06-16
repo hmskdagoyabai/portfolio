@@ -51,7 +51,8 @@ export default {
   methods: {},
   mounted: function () {
     // 参考 https://alliance7.blogspot.com/2019/01/google-formaxioscros.html
-    const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+    // const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+    const CORS_PROXY = "https://mighty-basin-61614.herokuapp.com/";
     axios
       .get(
         CORS_PROXY +
