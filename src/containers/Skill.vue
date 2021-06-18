@@ -26,7 +26,7 @@ export default {
 
         {
           key: "言語",
-          value: "Python, java, javascript, html, C, Google Apps Script ",
+          value: "Python, java, javascript, PHP, html, C, Google Apps Script ",
           url: "",
         },
         {

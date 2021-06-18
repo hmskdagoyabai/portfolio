@@ -17,24 +17,23 @@ export default {
   data() {
     return {
       items: [
-        {
-          key: "GitHub",
-          url: "https://github.com/hmskdagoyabai",
-        },
+        // {
+        //   key: "GitHub",
+        //   url: "https://github.com/hmskdagoyabai",
+        // },
 
-        {
-          key: "Qiita",
-          url: "https://qiita.com/hamahamabe",
-        },
+        { key: "Twitter", url: "https://twitter.com/ybybybmh" },
         {
           key: "YouTube",
           url: "https://www.youtube.com/channel/UC3ZUoqmcSSYIuvhLg8U6eoQ",
         },
-        { key: "Twitter", url: "https://twitter.com/ybybybmh" },
-
         {
           key: "note",
           url: "https://note.com/hmskdagoyabai",
+        },
+        {
+          key: "Qiita",
+          url: "https://qiita.com/hamahamabe",
         },
       ],
     };

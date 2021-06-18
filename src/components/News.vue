@@ -70,6 +70,12 @@ export default {
       showAll: false,
       News: [
         {
+          date: "2021/5/21",
+          type: "About",
+          dist: "#about",
+          body: "浜岡カルパッチョ が登場しました。",
+        },
+        {
           date: "2020/12/23",
           type: "Others",
           dist: "#others",

@@ -1,11 +1,20 @@
 <template>
   <div class="crafts">
-    <SubTitle title="Crafts" caption="ハード系のつくったものたちです。" fa_icon="ruler-combined" />
+    <SubTitle
+      title="Crafts"
+      caption="ハード系のつくったものたちです。"
+      fa_icon="ruler-combined"
+    />
     <div class="box-wrapper">
       <WorkCard :item="portfolio" />
       <WorkCard :item="YouTube.rina" />
       <WorkCard :item="YouTube.tenga" />
-      <Tweet class="tweet" v-for="tweet in tweets" :key="tweet" :id="tweet"></Tweet>
+      <Tweet
+        class="tweet"
+        v-for="tweet in tweets"
+        :key="tweet"
+        :id="tweet"
+      ></Tweet>
     </div>
   </div>
 </template>
@@ -24,10 +33,10 @@ export default {
   data() {
     return {
       tweets: [
-        // "1259419595019976704",
-        // "1261539238958362624",
+        "1259419595019976704",
         "1013414593773748224",
-        // "1068140620084994050",
+        "1261539238958362624",
+        "1068140620084994050",
       ],
       YouTube: {
         rina: {
